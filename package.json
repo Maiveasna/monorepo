@@ -1,0 +1,23 @@
+{
+  "name": "fe-mono",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "test:monorepo": "turbo run test --filter=@monorepo/ui",
+    "prepare": "turbo run prepare"
+  },
+  "packageManager": "yarn@1.22.22",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "turbo": "^2.0.3"
+  }
+}
